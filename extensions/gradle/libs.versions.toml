@@ -1,0 +1,42 @@
+[versions]
+dash = "0.4.10"
+kotlin = "2.0.0"
+kotest = "5.9.1"
+android = "8.0.2"
+ftcsdk = "10.0.0"
+mockk = "1.14.4"
+nextrunner = "2.3.0"
+nextftc = "0.6.2"
+
+[libraries]
+dashboard-core = { module = "com.acmerobotics.dashboard:core", version.ref = "dash" }
+dashboard-dashboard = { module = "com.acmerobotics.dashboard:dashboard", version.ref = "dash" }
+kotest-runner-junit5 = { module = "io.kotest:kotest-runner-junit5", version.ref = "kotest" }
+kotest-assertions-core = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest" }
+kotest-property = { module = "io.kotest:kotest-property", version.ref = "kotest" }
+kotlin-test = { module = "org.jetbrains.kotlin:kotlin-test" }
+ftcsdk-common = { module = "org.firstinspires.ftc:FtcCommon", version.ref = "ftcsdk" }
+ftcsdk-robotcore = { module = "org.firstinspires.ftc:RobotCore", version.ref = "ftcsdk" }
+ftcsdk-hardware = { module = "org.firstinspires.ftc:Hardware", version.ref = "ftcsdk" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+nextrunner-core = { module = "dev.nextftc.nextrunner:core", version.ref = "nextrunner" }
+nextrunner-actions = { module = "dev.nextftc.nextrunner:actions", version.ref = "nextrunner" }
+nextrunner-ftc = { module = "dev.nextftc.nextrunner:ftc", version.ref = "nextrunner" }
+nextftc-core = { module = "com.rowanmcalpin.nextftc:core", version.ref = "nextftc" }
+nextftc-ftc = { module = "com.rowanmcalpin.nextftc:ftc", version.ref = "nextftc" }
+
+[bundles]
+dashboard = ["dashboard-core", "dashboard-dashboard"]
+kotest = ["kotest-runner-junit5", "kotest-assertions-core", "kotest-property"]
+ftcsdk = ["ftcsdk-common", "ftcsdk-robotcore", "ftcsdk-hardware"]
+nextrunner = ["nextrunner-core", "nextrunner-actions", "nextrunner-ftc"]
+nextftc = ["nextftc-core", "nextftc-ftc"]
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "android" }
+android-library = { id = "com.android.library", version.ref = "android" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+dokka = { id = "org.jetbrains.dokka", version.ref = "kotlin" }
